@@ -6,6 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap 101 Template</title>
 
+    <link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="icon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="icon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="icon/android-chrome-192x192.png" sizes="192x192">
+    <meta name="msapplication-square70x70logo" content="icon/smalltile.png" />
+    <meta name="msapplication-square150x150logo" content="icon/mediumtile.png" />
+    <meta name="msapplication-wide310x150logo" content="icon/widetile.png" />
+    <meta name="msapplication-square310x310logo" content="icon/largetile.png" />
+
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
 
@@ -51,7 +70,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-6 col-sm-3">
-                <a class="btn btn-orange popup" href="#download">Скачать прайс</a>
+                <a class="btn btn-orange popup" href="price.txt" target="_blank">Скачать прайс</a>
             </div>
             <div class=" col-sm-6 hidden-xs text-center"><span class="header-text">Продажа цемента и сухих смесей оптом и в розницу с доставкой по Ставрополю и краю</span></div>
             <div class="col-xs-6 col-sm-3 text-right">
@@ -468,14 +487,18 @@
             <div class="col-sm-5 col-md-4">
                 <div class="form-block">
                     <div class="form-title">Оставьте заявку на бесплатный расчет стоимости</div>
-                    <form class="form">
+                    <form class="form" name="form" method="POST" action="javascript:void(0);">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Имя">
+                            <label class="name none required">
+                                <input type="text" class="form-control" name="name" placeholder="Имя">
+                            </label>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Телефон">
+                            <label class="phone none required">
+                                <input type="text" class="form-control" name="phone" placeholder="Телефон">
+                            </label>
                         </div>
-                        <button type="submit" class="btn btn-orange btn-lg">Рассчитать прямо сейчас!</button>
+                        <button type="submit" class="btn btn-orange btn-lg btn-submit">Рассчитать прямо сейчас!</button>
                     </form>
                 </div>
             </div>
@@ -485,96 +508,98 @@
 
 <section class="block05">
     <div class="container">
-        <h2>Другие товары</h2>
-        <div class="row">
-            <div class="col-xs-6 col-sm-3">
-                <div class="product">
-                    <div class="product-name">Гипс Джегутинский</div>
-                    <div class="product-image">
-                        <img class="img-responsive" src="img/images/other_01.jpg">
+        <h2 class="show-title">Другие товары</h2>
+        <div class="box-hide">
+            <div class="row">
+                <div class="col-xs-6 col-sm-3">
+                    <div class="product">
+                        <div class="product-name">Гипс Джегутинский</div>
+                        <div class="product-image">
+                            <img class="img-responsive" src="img/images/other_01.jpg">
+                        </div>
+                        <div class="product-detail"></div>
+                        <div class="product-container">25 кг/мешок</div>
+                        <a href="#get-price" class="btn btn-orange get-price">Узнать цену</a>
                     </div>
-                    <div class="product-detail"></div>
-                    <div class="product-container">25 кг/мешок</div>
-                    <a href="#get-price" class="btn btn-orange get-price">Узнать цену</a>
                 </div>
-            </div>
-            <div class="col-xs-6 col-sm-3">
-                <div class="product">
-                    <div class="product-name">Керамзит</div>
-                    <div class="product-image">
-                        <img class="img-responsive" src="img/images/other_02.jpg">
+                <div class="col-xs-6 col-sm-3">
+                    <div class="product">
+                        <div class="product-name">Керамзит</div>
+                        <div class="product-image">
+                            <img class="img-responsive" src="img/images/other_02.jpg">
+                        </div>
+                        <div class="product-detail"></div>
+                        <div class="product-container">5 ведер/мешок</div>
+                        <a href="#get-price" class="btn btn-orange get-price">Узнать цену</a>
                     </div>
-                    <div class="product-detail"></div>
-                    <div class="product-container">5 ведер/мешок</div>
-                    <a href="#get-price" class="btn btn-orange get-price">Узнать цену</a>
                 </div>
-            </div>
-            <div class="col-xs-6 col-sm-3">
-                <div class="product">
-                    <div class="product-name">Грунт глубокого проникновения</div>
-                    <div class="product-image">
-                        <img class="img-responsive" src="img/images/other_03.jpg">
+                <div class="col-xs-6 col-sm-3">
+                    <div class="product">
+                        <div class="product-name">Грунт глубокого проникновения</div>
+                        <div class="product-image">
+                            <img class="img-responsive" src="img/images/other_03.jpg">
+                        </div>
+                        <div class="product-detail"></div>
+                        <div class="product-container">4%, 10 кг</div>
+                        <a href="#get-price" class="btn btn-orange get-price">Узнать цену</a>
                     </div>
-                    <div class="product-detail"></div>
-                    <div class="product-container">4%, 10 кг</div>
-                    <a href="#get-price" class="btn btn-orange get-price">Узнать цену</a>
                 </div>
-            </div>
-            <div class="col-xs-6 col-sm-3">
-                <div class="product">
-                    <div class="product-name">Грунтовка универсальная</div>
-                    <div class="product-image">
-                        <img class="img-responsive" src="img/images/other_04.jpg">
+                <div class="col-xs-6 col-sm-3">
+                    <div class="product">
+                        <div class="product-name">Грунтовка универсальная</div>
+                        <div class="product-image">
+                            <img class="img-responsive" src="img/images/other_04.jpg">
+                        </div>
+                        <div class="product-detail"></div>
+                        <div class="product-container">4%, 10 кг</div>
+                        <a href="#get-price" class="btn btn-orange get-price">Узнать цену</a>
                     </div>
-                    <div class="product-detail"></div>
-                    <div class="product-container">4%, 10 кг</div>
-                    <a href="#get-price" class="btn btn-orange get-price">Узнать цену</a>
                 </div>
-            </div>
 
 
-            <div class="col-xs-6 col-sm-3">
-                <div class="product">
-                    <div class="product-name">Песок мытый</div>
-                    <div class="product-image">
-                        <img class="img-responsive" src="img/images/other_05.jpg">
+                <div class="col-xs-6 col-sm-3">
+                    <div class="product">
+                        <div class="product-name">Песок мытый</div>
+                        <div class="product-image">
+                            <img class="img-responsive" src="img/images/other_05.jpg">
+                        </div>
+                        <div class="product-detail"></div>
+                        <div class="product-container">25 кг/мешок</div>
+                        <a href="#get-price" class="btn btn-orange get-price">Узнать цену</a>
                     </div>
-                    <div class="product-detail"></div>
-                    <div class="product-container">25 кг/мешок</div>
-                    <a href="#get-price" class="btn btn-orange get-price">Узнать цену</a>
                 </div>
-            </div>
-            <div class="col-xs-6 col-sm-3">
-                <div class="product">
-                    <div class="product-name">Отсев</div>
-                    <div class="product-image">
-                        <img class="img-responsive" src="img/images/other_06.jpg">
+                <div class="col-xs-6 col-sm-3">
+                    <div class="product">
+                        <div class="product-name">Отсев</div>
+                        <div class="product-image">
+                            <img class="img-responsive" src="img/images/other_06.jpg">
+                        </div>
+                        <div class="product-detail"></div>
+                        <div class="product-container">5 ведер/мешок</div>
+                        <a href="#get-price" class="btn btn-orange get-price">Узнать цену</a>
                     </div>
-                    <div class="product-detail"></div>
-                    <div class="product-container">5 ведер/мешок</div>
-                    <a href="#get-price" class="btn btn-orange get-price">Узнать цену</a>
                 </div>
-            </div>
-            <div class="col-xs-6 col-sm-3">
-                <div class="product">
-                    <div class="product-name">Бордюры</div>
-                    <div class="product-image">
-                        <img class="img-responsive" src="img/images/other_07.jpg">
+                <div class="col-xs-6 col-sm-3">
+                    <div class="product">
+                        <div class="product-name">Бордюры</div>
+                        <div class="product-image">
+                            <img class="img-responsive" src="img/images/other_07.jpg">
+                        </div>
+                        <div class="product-detail"></div>
+                        <div class="product-container">4%, 10 кг</div>
+                        <a href="#get-price" class="btn btn-orange get-price">Узнать цену</a>
                     </div>
-                    <div class="product-detail"></div>
-                    <div class="product-container">4%, 10 кг</div>
-                    <a href="#get-price" class="btn btn-orange get-price">Узнать цену</a>
                 </div>
-            </div>
-            <div class="col-xs-6 col-sm-3">
-                <div class="product">
-                    <div class="product-name">Сетка кладочная и сварная</div>
-                    <div class="product-image">
-                        <img class="img-responsive" src="img/images/other_08.jpg">
+                <div class="col-xs-6 col-sm-3">
+                    <div class="product">
+                        <div class="product-name">Сетка кладочная и сварная</div>
+                        <div class="product-image">
+                            <img class="img-responsive" src="img/images/other_08.jpg">
+                        </div>
+                        <div class="product-detail"></div>
+                        <div class="product-container">4%, 10 кг</div>
+                        <a href="#get-price" class="btn btn-orange get-price">Узнать цену</a>
                     </div>
-                    <div class="product-detail"></div>
-                    <div class="product-container">4%, 10 кг</div>
-                    <a href="#get-price" class="btn btn-orange get-price">Узнать цену</a>
                 </div>
             </div>
         </div>
@@ -825,6 +850,44 @@
 </footer>
 
 
+<div class="hidden">
+    <div class="form-block form-popup" id="get-price">
+        <div class="form-title">Запрос цены</div>
+        <form class="form" name="form" method="POST" action="javascript:void(0);">
+            <div class="form-group">
+                <label class="name none required">
+                    <input type="text" class="form-control" name="name" placeholder="Имя">
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="phone none required">
+                    <input type="text" class="form-control" name="phone" placeholder="Телефон">
+                </label>
+            </div>
+            <button type="submit" class="btn btn-orange btn-lg btn-submit">Узнать цену</button>
+        </form>
+    </div>
+</div>
+
+<div class="hidden">
+    <div class="form-block form-popup" id="callback">
+        <div class="form-title">Обратный звонок</div>
+        <form class="form" name="form" method="POST" action="javascript:void(0);">
+            <div class="form-group">
+                <label class="name none required">
+                    <input type="text" class="form-control" name="name" placeholder="Имя">
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="phone none required">
+                    <input type="text" class="form-control" name="phone" placeholder="Телефон">
+                </label>
+            </div>
+            <button type="submit" class="btn btn-orange btn-lg btn-submit">отправить</button>
+        </form>
+    </div>
+</div>
+
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -833,6 +896,7 @@
 <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script src="js/vendor/jquery.fancybox/jquery.fancybox.pack.js"></script>
 <script src="js/vendor/slick/slick.min.js"></script>
+<script src="js/vendor/validator.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

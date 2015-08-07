@@ -417,7 +417,16 @@ body {
   background: #fafafa;
 }
 .block05 h2 {
+  cursor: pointer;
   margin-bottom: 30px;
+}
+.block05 .box-hide {
+  display: none;
+}
+@media (min-width: 768px) {
+  .block05 .box-hide {
+    display: block;
+  }
 }
 .block06 {
   padding: 25px 0 0 0;
@@ -733,6 +742,18 @@ body {
   padding-bottom: 40px;
 }
 /* Buttons & Form */
+.btn {
+  outline: none;
+}
+.btn:active {
+  color: #fff;
+}
+.btn:focus {
+  color: #fff;
+}
+.btn:hover {
+  color: #fff;
+}
 .btn-orange {
   color: #fff;
   border-bottom: 1px solid #000;
@@ -764,6 +785,9 @@ body {
 .form-control::-webkit-input-placeholder {
   color: #8e8e8e;
 }
+.red .form-control {
+  background-color: #ffc5c2;
+}
 .form-block {
   padding: 25px 20px;
   background: #fff;
@@ -785,6 +809,23 @@ body {
     font-size: 20px;
     line-height: 25px;
   }
+}
+.done {
+  color: #000;
+  font-size: 16px;
+  text-align: center;
+  padding: 50px 20px;
+}
+.done .done-title {
+  color: #f46225;
+  display: block;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+label {
+  display: block;
+  width: 100%;
+  font-weight: 400;
 }
 /* Typography
    ========================= */

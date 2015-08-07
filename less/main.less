@@ -451,7 +451,19 @@ body {
 	background: #fafafa;
 
 	h2 {
+		cursor: pointer;
 		margin-bottom: 30px;
+	}
+
+	.box-hide {
+		display: none;
+	}
+
+	@media (min-width: @screen-sm-min) {
+
+		.box-hide {
+			display: block;
+		}
 	}
 }
 
@@ -837,6 +849,23 @@ body {
 
 /* Buttons & Form */
 
+
+.btn {
+	outline: none;
+
+	&:active {
+		color: #fff;
+	}
+
+	&:focus {
+		color: #fff;
+	}
+
+	&:hover {
+		color: #fff;
+	}
+}
+
 .btn-orange {
 	color: #fff;
 	border-bottom: 1px solid #000;
@@ -863,6 +892,12 @@ body {
 	}
 
 	.placeholder(#8e8e8e);
+}
+
+.red {
+	.form-control {
+		background-color: #ffc5c2;
+	}
 }
 
 .form-block {
@@ -893,6 +928,26 @@ body {
 	}
 }
 
+.done {
+	color: #000;
+	font-size: 16px;
+	text-align: center;
+	padding: 50px 20px;
+
+	.done-title {
+		color: @color-orange;
+		display: block;
+		font-size: 25px;
+		margin-bottom: 30px;
+	}
+}
+
+
+label {
+	display: block;
+	width: 100%;
+	font-weight: 400;
+}
 
 /* Typography
    ========================= */
