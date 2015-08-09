@@ -816,26 +816,31 @@
     <div class="container">
         <h3>Остались вопросы?<br/> Закажите бесплатный звонок нашего специалиста!</h3>
         <div class="form-quest">
-            <form class="form">
+            <form class="form" name="form" method="POST" action="javascript:void(0);">
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Имя">
+                            <label class="name none required">
+                                <input type="text" class="form-control" name="name" placeholder="Имя">
+                            </label>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Телефон">
+                            <label class="phone none required">
+                                <input type="text" class="form-control" name="phone" placeholder="Телефон">
+                            </label>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <button type="submit" class="btn btn-orange btn-lg">Заказать звонок</button>
+                            <button type="submit" class="btn btn-orange btn-lg btn-submit">Заказать звонок</button>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
+
     </div>
 </section>
 
@@ -845,7 +850,7 @@
         <div class="row">
             <div class="col-sm-4 col-md-4 ogrn">ОГРН 1234567890</div>
             <div class="col-sm-3 col-md-4">8-800-000-00-00</div>
-            <div class="col-sm-5 col-md-4 dev">Создание сайта: <a href="#">ВебАгрегатор</a></div>
+            <div class="col-sm-5 col-md-4 dev">Создание сайта: <a href="http://webagregator.ru/">ВебАгрегатор</a></div>
         </div>
     </div>
 </footer>

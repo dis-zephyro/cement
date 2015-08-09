@@ -96,10 +96,10 @@ $(document).ready(function() {
     $('.btn-submit').click(function() {
 
         $('body').find('form:not(this)').children('label').removeClass('red'); //удаление всех сообщение об ошибке(валидатора)
-        var answer = checkForm($(this).parent().get(0)); //ответ от валидатора
+        var answer = checkForm($(this).closest('form').get(0)); //ответ от валидатора
         if(answer != false)
         {
-            var $form = $(this).parent(),
+            var $form = $(this).closest('form'),
                 name =     $('input[name="name"]', $form).val(),
                 phone =    $('input[name="phone"]', $form).val();
             console.log(name, phone);

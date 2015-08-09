@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="cement" autoUploadExternalChanges="true">
+  <component name="PublishConfigData" autoUpload="Always" serverName="cement2" autoUploadExternalChanges="true">
     <serverData>
       <paths name="cement">
         <serverdata>
           <mappings>
             <mapping deploy="/www/zephyrus.ru/project/cement" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="cement2">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
