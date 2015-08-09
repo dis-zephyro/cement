@@ -30,6 +30,10 @@ body {
 .navbar-default {
 	background-color: #f8f8f8;
 
+	.navbar {
+		margin-bottom: 0;
+	}
+
 	.navbar-nav {
 
 		> li {
@@ -43,16 +47,31 @@ body {
 		}
 	}
 
+
+
 	@media (min-width: @screen-sm-min) {
-		font-size: 10px;
+		text-align: center;
+		font-size: 0;
+
+		.navbar-nav {
+			float: none;
+			font-size: 10px;
+			display: inline-block;
+		}
+
 	}
 	@media (min-width: @screen-md-min) {
-		font-size: 14px;
+
+
+		.navbar-nav {
+			font-size: 14px;
+		}
 	}
 }
 
 
 .header {
+	padding-top: 70px;
 	padding-bottom: 20px;
 
 	.btn {

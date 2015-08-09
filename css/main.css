@@ -79,20 +79,30 @@ body {
 .navbar-default {
   background-color: #f8f8f8;
 }
+.navbar-default .navbar {
+  margin-bottom: 0;
+}
 .navbar-default .navbar-nav > li > a:hover {
   background-color: #e9e9e9;
 }
 @media (min-width: 768px) {
   .navbar-default {
+    text-align: center;
+    font-size: 0;
+  }
+  .navbar-default .navbar-nav {
+    float: none;
     font-size: 10px;
+    display: inline-block;
   }
 }
 @media (min-width: 960px) {
-  .navbar-default {
+  .navbar-default .navbar-nav {
     font-size: 14px;
   }
 }
 .header {
+  padding-top: 70px;
   padding-bottom: 20px;
 }
 .header .btn {

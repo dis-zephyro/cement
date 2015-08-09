@@ -1,3 +1,10 @@
+$('.navbar-nav li a').click(function(){
+    var str=$(this).attr('href');
+    $.scrollTo(str, {offset:-50});
+    return false;
+});
+
+
 $('.certificate-slide').slick({
     dots: false,
     infinite: false,
